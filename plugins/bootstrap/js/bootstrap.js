@@ -1,7 +1,12 @@
 /*!
-  * Bootstrap v4.3.1 (https://getbootstrap.com/)
-  * Copyright 2011-2019 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
-  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+  *<!-- 
+  About me:  https://admiralfuugo.github.io/about-me/
+  Instagram:https://www.instagram.com/fuugo13
+  Telegram:https://t.me/gooyu13
+  Facebook:https://facebook.com/akbaralianvarov13 
+  Owner: https://aktahiuzz.netlify.app
+  Git-Hub: https://github.com/Admiralfuugo
+-->
   */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('jquery'), require('popper.js')) :
