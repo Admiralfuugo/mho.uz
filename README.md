@@ -10,6 +10,13 @@ Rasmiy saytga xush kelibsiz
   Git-Hub: https://github.com/Admiralfuugo <br>
 
 
+
+
+
+
+  
+
+
 #include <iostream>
 
 using namespace std;
@@ -36,3 +43,13 @@ cout<<"YES";
 else
 cout<<"NO";
 }
+
+
+
+a = int(input())
+print("Qiziqarli")
+
+
+
+print(sum(map(int,input().split())))
+
