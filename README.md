@@ -80,45 +80,20 @@ cout<<n-a[max];
 -------------------------------------------------------------------------------------
 
 
+def min_characters_to_add(password):
+    count = 0
+    if any(i.isdigit() for i in password) == False:
+        count += 1
+    if any(i.islower() for i in password) == False:
+        count += 1
+    if any(i.isupper() for i in password) == False:
+        count += 1
+    if any(i in '!@#$%^&*()-+' for i in password) == False:
+        count += 1
+    return max(count, 6 - len(password))
 
-def minimum_additional_chars(password):
-    min_length = 6
-    min_digit = 1
-    min_lower = 1
-    min_upper = 1
-    min_special = 1
-    special_chars = "!@#$%^&*()-+"
+n = int(input().strip())
+password = input().strip()
+print(min_characters_to_add(password))
 
-    additional_chars = 0
-
-    # Check length
-    if len(password) < min_length:
-        additional_chars += min_length - len(password)
-
-    # Check for at least one digit
-    if not any(char.isdigit() for char in password):
-        additional_chars += min_digit
-
-    # Check for at least one lowercase letter
-    if not any(char.islower() for char in password):
-        additional_chars += min_lower
-
-    # Check for at least one uppercase letter
-    if not any(char.isupper() for char in password):
-        additional_chars += min_upper
-
-    # Check for at least one special character
-    if not any(char in special_chars for char in password):
-        additional_chars += min_special
-
-    return additional_chars
-
-# Kiruvchi ma'lumotlarni olish
-n = int(input())
-password = input()
-
-# Parol uchun kerakli qo'shimcha belgilar sonini hisoblash
-additional_chars = minimum_additional_chars(password)
-
-# Natijani chiqarish
-print(additional_chars)
+---------------------------------------------
