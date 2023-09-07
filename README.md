@@ -80,20 +80,20 @@ cout<<n-a[max];
 -------------------------------------------------------------------------------------
 
 
-def min_characters_to_add(password):
+def qosh(kod):
     count = 0
-    if any(i.isdigit() for i in password) == False:
+    if any(i.isdigit() for i in kod) == False:
         count += 1
-    if any(i.islower() for i in password) == False:
+    if any(i.islower() for i in kod) == False:
         count += 1
-    if any(i.isupper() for i in password) == False:
+    if any(i.isupper() for i in kod) == False:
         count += 1
-    if any(i in '!@#$%^&*()-+' for i in password) == False:
+    if any(i in '!@#$%^&*()-+' for i in kod) == False:
         count += 1
-    return max(count, 6 - len(password))
+    return max(count, 6 - len(kod))
 
 n = int(input().strip())
-password = input().strip()
-print(min_characters_to_add(password))
+kod = input().strip()
+print(qosh(kod))
 
 ---------------------------------------------
