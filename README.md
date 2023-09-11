@@ -15,46 +15,38 @@ Rasmiy saytga xush kelibsiz
 
 
   
-------------------------------------------------------------------------------------------
-toq son
-#include <iostream>
 
-using namespace std;
 
-int main()
-{
- 
-long long x,y;
-cin>>x;
-int k=0;
-while(x>0)
-{
-    y=x%10; k+=1;
-    if(y%2==0)
-    {
-        cout<<"No";
-        return 0;
-        
-    }
-    x/=10;
-}
-if(k%2==1)
-cout<<"YES";
-else
-cout<<"NO";
-}
+------------------------------------------------------------------
+
+
+
+
+
+============================================================
+
+
+
+
+
+
+
 
 -------------------------------------------------------------------------------------------------
-qiziqarli
-a = int(input())
-print("Qiziqarli")
+**oson hisobla**
 
-------------------------------------------------------------------------------------------------
-a+b
-print(sum(map(int,input().split())))
+n, k = map(int, input().split())
+s, p = 0, 1
+while n>0:
+    d = n%k
+    s += d
+    p *= d
+    n //= k
+print(p-s)
+=======================================================*
 
--------------------------------------------------------------------------------------------------
-massivni uchirish
+**massivni uchirish**
+
 #include <iostream>
 #include <cmath>
 #include <string>
@@ -62,23 +54,26 @@ using namespace std;
 int main()
 
 {
-int n,a[101]={0},k,max=0,sum=0;
-cin>>n;
-for(int i=0;i<n;i++)
+int katta=0,yig=0;
+int son,x[101]={0},b;katta=0,yig=0;
+
+
+cin>>son;
+for(int i=0;i<son;i++)
 {
-    cin>>k;
-    a[k]++;
+cin>>b;
+x[b]++;
 }
 for(int i=0;i<101;i++)
 {
-    if(a[i]>a[max])
-    max=i;
+if(x[i]>x[katta])
+katta=i;
 }
-cout<<n-a[max];
+cout<<son-x[katta];
 }
 
 -------------------------------------------------------------------------------------
-
+**parol**
 
 def qosh(kod):
     count = 0
@@ -96,4 +91,30 @@ n = int(input().strip())
 kod = input().strip()
 print(qosh(kod))
 
----------------------------------------------
+---------------------------------------------_________
+**O'qlar**
+
+a=input();s=0;m=0
+for i in range(len(a)):
+ if len(a)<5:
+ break
+ elif i<len(a)-4:
+ if a[i]=='>' and a[i+1]=='>' and a[i+2]=='-' and
+a[i+3]=='-' and a[i+4]=='>':
+ s=s+1
+ elif a[i]=='<' and a[i+1]=='-' and a[i+2]=='-' and
+a[i+3]=='<' and a[i+4]=='<':
+ m=m+1
+d=s+m
+print(int(d))
+
+_________________________________________________________________________
+
+**teatr**
+from math import ceil
+ 
+n, m, a = map(int, input().split())
+print(ceil(n/a)*ceil(m/a))
+______________________________________________________________________
+
+
